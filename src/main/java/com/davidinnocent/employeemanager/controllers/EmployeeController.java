@@ -61,8 +61,18 @@ public class EmployeeController {
     }
 
     @DeleteMapping("/deleteEmployee/{id}")
-    public void deleteEmployeeById(@PathVariable Long id) {
-        service.deleteEmployeeById(id);
+    public ResponseEntity<Employee> deleteEmployeeById(@PathVariable Long id) {
+        try{
+            Employee employee=service.getSingleEmployee(id);
+            service.deleteEmployeeById(id);
+           return new ResponseEntity<>(employee,HttpStatus.OK);
+
+
+        }
+        catch (UserNotFoundException exception){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,"User not found",exception);
+        }
+
     }
 
 }
