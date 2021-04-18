@@ -8,9 +8,9 @@ import java.io.Serializable;
 @Entity
 public class Employee implements Serializable {
     private String name,email,jobTitle,phone,imageUrl;
+
+
     @Column(nullable = false,updatable = false)
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
