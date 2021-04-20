@@ -24,7 +24,7 @@ public class EmployeeManagerApplication {
         configuration.setAllowedOrigins(Arrays.asList("http://localhost:ANGULARPORT HERE"));
         configuration.setAllowedHeaders(Arrays.asList("Origin","Access-Control-Allow-Origin","Content-Type",
                 "Accept","Authorization","Origin, Accept","X-Requested-With",
-                "Access-Control-Request-Method","Access-Control-Request-Headers"));
+                "Access-Control-Request-Method","Access-Cont  rol-Request-Headers"));
         configuration.setExposedHeaders(Arrays.asList("Origin","Access-Control-Allow-Origin","Content-Type",
                 "Accept","Authorization","Access-Control-Allow-Credentials"));
         configuration.setAllowedMethods(Arrays.asList("GET","POST","PUT","DELETE","OPTIONS"));
